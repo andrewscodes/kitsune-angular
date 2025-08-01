@@ -5,7 +5,6 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 @Component({
   selector: 'app-main',
   imports: [
-    RouterOutlet,
     NavMenuComponent
   ],
   templateUrl: './app.component.html',

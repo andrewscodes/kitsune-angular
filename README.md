@@ -60,8 +60,10 @@ For more information on using the Angular CLI, including detailed command refere
 
 
 ## Deployment
+
+npx angular-cli-ghpages --dir=dist/browser
+
 ng build --base-href "https://github.com/andrewscodes/kitsune-angular"
 
 ng deploy --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes" --base-href=/kitsune-angular/
 
-npx angular-cli-ghpages --dir=dist/browser
