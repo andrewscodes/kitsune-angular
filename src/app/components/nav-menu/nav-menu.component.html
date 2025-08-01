@@ -1,18 +1,22 @@
 <nav class="navbar">
   <div class="logo">
-    <img src="assets/images/kitsune_logo_256.png" alt="Kitsune Logo" style="height:40px;" />
+    <img src="assets/images/kitsune_logo_256.png" alt="Kitsune Logo"/>
   </div>
-  <ul class="nav-links">
-    <li>HOME</li>
-    <li>SHOP</li>
-    <li>ABOUT</li>
-    <li>CONTACT</li>
+  
+  <div class="navbar-options-menu" (click)="toggleMenu()">
+    <span class="material-symbols-outlined">menu</span>
+  </div>
+  
+  <ul class="navbar-options" [class.mobile-menu-open]="isMobileMenuOpen" (click)="$event.stopPropagation()">
+    <li (click)="onMenuItemClick()">HOME</li>
+    <li (click)="onMenuItemClick()">PRODUCTS</li>
+    <li (click)="onMenuItemClick()">ABOUT</li>
+    <li (click)="onMenuItemClick()">CONTACT</li>
   </ul>
+  
   <div class="cart-icon">
-    <span class="cart-count">0</span>
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <rect x="8" y="10" width="16" height="12" rx="2" stroke="#fff" stroke-width="2"/>
-      <path d="M12 22a2 2 0 1 0 4 0" stroke="#fff" stroke-width="2"/>
-    </svg>
+    <span class="material-symbols-outlined">
+      shopping_bag
+    </span>
   </div>
 </nav>

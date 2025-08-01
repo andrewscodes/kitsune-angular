@@ -65,3 +65,6 @@ For more information on using the Angular CLI, including detailed command refere
 ng deploy --base-href=/kitsune-angular/ --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes"
 
 ## For custom domain (kitsunelabs.shop)
+ng deploy --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes" --cname=kitsunelabs.shop
+
+chrome://net-internals/#hsts
