@@ -59,11 +59,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 
-## Deployment
+# Deployment
+ng build --base-href="/kitsune-angular/"
 
-npx angular-cli-ghpages --dir=dist/browser
-
-ng build --base-href "https://github.com/andrewscodes/kitsune-angular"
-
-ng deploy --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes" --base-href=/kitsune-angular/
-
+ng deploy --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes" --base-href=/kitsune-angular/ --cname=kitsunelabs.shop
