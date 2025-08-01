@@ -60,6 +60,5 @@ For more information on using the Angular CLI, including detailed command refere
 
 
 # Deployment
-ng build --base-href="/kitsune-angular/"
 
-ng deploy --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes" --base-href=/kitsune-angular/ --cname=kitsunelabs.shop
+ng deploy --base-href=/kitsune-angular/ --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes" --cname=kitsunelabs.shop
