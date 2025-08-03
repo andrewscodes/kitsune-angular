@@ -6,10 +6,6 @@
   padding: 1rem 2rem;
   min-height: 60px;
   position: relative;
-  /* Add safe area padding for mobile devices */
-  padding-top: max(1rem, env(safe-area-inset-top));
-  padding-left: max(2rem, env(safe-area-inset-left));
-  padding-right: max(2rem, env(safe-area-inset-right));
 }
 
 .logo {
@@ -147,12 +143,7 @@
 
 @media (max-width: 480px) {
   .navbar {
-    padding: 1rem;
-    /* Ensure minimum padding on very small screens */
-    padding-top: max(1rem, env(safe-area-inset-top));
-    padding-left: max(1rem, env(safe-area-inset-left));
-    padding-right: max(1rem, env(safe-area-inset-right));
-    /* Prevent content from being cut off */
+    padding: 1rem;   
     min-height: 56px;
   }
   
