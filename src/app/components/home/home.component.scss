@@ -1,126 +1,133 @@
-.home-section {    
+.home {    
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;  
+  height: 80vh;
+
+  &__main-product {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    gap: 3rem;
+
+    &-info {
+      flex: 1;
+      color: var(--text-color-light);
+
+      h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1;
+        color: var(--text-color-light);
+        letter-spacing: 2px;
+      } 
+
+      h2 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 0;
+        color: var(--primary-accent, #e91e63);
+        line-height: 1;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin: 2rem 0;
+        opacity: 0.9;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
+    }
+
+    &-buy-button {
+      background: var(--primary-accent, #e91e63);
+      color: white;
+      border: none;
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      &:hover {
+        background: var(--primary-accent-dark, #c2185b);
+        transform: translateY(-1px);
+        box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
+      }
+    }
+
+    &-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+      img {
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+    }
+  }
 }
 
-.home-main-product {
-  display: flex;
-  width: 100%;
-  max-width: 1200px;
-  align-items: center;
-  gap: 3rem;
-}
-
-.home-main-product-info {
-  flex: 1;
-  color: var(--text-color-light);
-}
-
-.home-main-product-info h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  margin: 0;
-  line-height: 1;
-  color: var(--text-color-light);
-  letter-spacing: 2px;
-}
-
-.home-main-product-info h2 {
-  font-size: 4rem;
-  font-weight: bold;
-  margin: 0;
-  color: var(--primary-accent, #e91e63);
-  line-height: 1;
-}
-
-.home-main-product-info p {
-  font-size: 1.2rem;
-  margin: 2rem 0;
-  opacity: 0.9;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-.main-product-buy-button {
-  background: var(--primary-accent, #e91e63);
-  color: white;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.main-product-buy-button:hover {
-  background: var(--primary-accent-dark, #c2185b);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
-}
-
-.home-product-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-image {
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-  transition: transform 0.3s ease;
-}
-
-.product-image:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  .home-main-product {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-  
-  .home-main-product-info h1 {
-    font-size: 2.5rem;
-  }
-  
-  .home-main-product-info h2 {
-    font-size: 2.5rem;
-  }
-  
-  .product-image {
-    max-width: 350px;
+  .home {
+    &__main-product {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+
+      &-info{
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h2 {
+          font-size: 2.5rem;
+        }
+
+      }
+
+      &-image {
+        max-width: 350px;
+      }
+    }
   }
 }
 
 @media (max-width: 480px) {
-  .home-section {
+  .home {
     padding: 1rem;
-  }
-  
-  .home-main-product-info h1 {
-    font-size: 2rem;
-  }
-  
-  .home-main-product-info h2 {
-    font-size: 2rem;
-  }
-  
-  .home-main-product-info p {
-    font-size: 1rem;
-  }
-  
-  .product-image {
-    max-width: 280px;
+
+    &__main-product{
+      &-info{
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      img{
+        max-width: 280px;
+      }
+    }
   }
 }
