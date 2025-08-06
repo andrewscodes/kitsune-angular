@@ -1,22 +1,22 @@
 <nav class="navbar">
-  <div class="logo">
+  <div class="navbar__logo">
     <img src="assets/images/kitsune_logo_256.png" alt="Kitsune Logo"/>
   </div>
-  
-  <div class="navbar-options-menu" (click)="toggleMenu()">
+
+  <button class="navbar__options-menu" (click)="toggleMenu()" type="button" aria-label="Toggle menu">
     <span class="material-symbols-outlined">menu</span>
-  </div>
+  </button>
   
-  <ul class="navbar-options" [class.mobile-menu-open]="isMobileMenuOpen" (click)="$event.stopPropagation()">
+  <ul class="navbar__options" [class.mobile-menu-open]="isMobileMenuOpen" (click)="$event.stopPropagation()">
     <li (click)="onMenuItemClick()">HOME</li>
     <li (click)="onMenuItemClick()">PRODUCTS</li>
     <li (click)="onMenuItemClick()">ABOUT</li>
     <li (click)="onMenuItemClick()">CONTACT</li>
   </ul>
   
-  <div class="cart-icon">
+  <button class="navbar__cart-button" (click)="onCartClick()" type="button">
     <span class="material-symbols-outlined">
       shopping_bag
     </span>
-  </div>
+  </button>
 </nav>

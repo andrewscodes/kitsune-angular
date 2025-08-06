@@ -13,7 +13,15 @@ export class NavMenuComponent {
   }
 
   onMenuItemClick() {
-    // Close the mobile menu when a menu item is clicked    
+    // Close the mobile menu when a menu item is clicked
+    this.isMobileMenuOpen = false;
+  }
+
+  onCartClick() {
+    // Handle cart click functionality
+    console.log('Cart clicked!');
+    // Add your cart functionality here
+    // For example: navigate to cart page, open cart sidebar, etc.
   }
 
  
