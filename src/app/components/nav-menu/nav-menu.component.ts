@@ -23,6 +23,5 @@ export class NavMenuComponent {
     // Add your cart functionality here
     // For example: navigate to cart page, open cart sidebar, etc.
   }
-
  
 }
