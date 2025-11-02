@@ -1,11 +1,21 @@
 @use './themes.scss';
 
+:root {
+  --page-width: 100rem;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  background-color: var(--background-color-dark);
+  background-color: var(--background-color-white);  
 }
 
 body {    
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-width {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 0 3rem;
 }

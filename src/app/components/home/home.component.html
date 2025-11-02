@@ -1,14 +1,27 @@
 <section class="home">
   <div class="home__main-product">
-    <div class="home__main-product-info">
-      <h1>BUILD YOUR DREAM</h1>
-      <h2>keyboard</h2>
-      <p>Select your preferred layout, switches, keycaps and more. You can customize your keyboard and solder it together or buy a fully assembled one.</p>
-      <button class="home__main-product-buy-button">BUILD NOW</button>
+    <div class="home__main-product-background">
+      <img src="assets/images/onyx.png" alt="Kitsune Onyx Keyboard">
     </div>
-    <div class="home__main-product-image">
-      <img src="assets/images/sofle2.png" alt="Kitsune Product">
+    <div class="home__main-product-content page-width">
+      <h1>Kitsoone Onyx</h1>       
+      <div class="home__main-product-features">
+        <span>Split keyboard</span> | <span>Wireless</span> | <span>Ergonomic</span> | <span>RGB</span>
+      </div>     
+      <button class="home__main-product-buy-button">Shop Now</button>
+    </div>
+  </div>
+  <div class="home__products-container page-width">
+    <h2>Our Products</h2>
+    <div class="home__products-container-list">
+      @for(product of products; track product) {
+        <app-card 
+          [imageSrc]="product.image" 
+          [imageAlt]="product.name"
+          [title]="product.name"
+          [description]="product.description">
+        </app-card>
+      }   
     </div>
   </div>
 </section>
-

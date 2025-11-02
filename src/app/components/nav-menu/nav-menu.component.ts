@@ -18,10 +18,7 @@ export class NavMenuComponent {
   }
 
   onCartClick() {
-    // Handle cart click functionality
     console.log('Cart clicked!');
-    // Add your cart functionality here
-    // For example: navigate to cart page, open cart sidebar, etc.
   }
  
 }

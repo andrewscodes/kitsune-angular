@@ -24,6 +24,11 @@ export class HomeComponent {
       name: "Nice!Nano Controller",
       image: "assets/images/nicenano.avif",
       description: "Wireless microcontroller for custom keyboards"
+    },
+    {
+      name: "Corne Keyboard",
+      image: "assets/images/corne.webp",
+      description: "A split ergonomic keyboard with 42 keys"
     }
   ] 
 }
