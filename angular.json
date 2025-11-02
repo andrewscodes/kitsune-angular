@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "kitsune-angular": {
+    "kitsoone-website": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/kitsune-angular",
+            "outputPath": "dist/kitsoone-website",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "kitsune-angular:build:production"
+              "buildTarget": "kitsoone-website:build:production"
             },
             "development": {
-              "buildTarget": "kitsune-angular:build:development"
+              "buildTarget": "kitsoone-website:build:development"
             }
           },
           "defaultConfiguration": "development"

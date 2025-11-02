@@ -57,14 +57,3 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-
-
-# Deployment
-
-## For GitHub Pages subdirectory (andrewscodes.github.io/kitsoone-website/)
-ng deploy --base-href=/kitsoone-website/ --repo=https://github.com/andrewscodes/kitsoone-website.git --name="andrewscodes"
-
-## For custom domain (kitsunelabs.shop)
-ng deploy --repo=https://github.com/andrewscodes/kitsoone-website.git --name="andrewscodes" --cname=kitsoone.xyz
-
-chrome://net-internals/#hsts

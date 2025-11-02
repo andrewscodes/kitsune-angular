@@ -1,5 +1,5 @@
 {
-  "name": "kitsune-angular",
+  "name": "kitsoone-website",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:kitsune-angular": "node dist/kitsune-angular/server/server.mjs"
+    "serve:ssr:kitsoone-website": "node dist/kitsoone-website/server/server.mjs"
   },
   "private": true,
   "dependencies": {
