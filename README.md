@@ -1,4 +1,4 @@
-# KitsuneAngular
+# Kitsoone website
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
 
@@ -61,10 +61,10 @@ For more information on using the Angular CLI, including detailed command refere
 
 # Deployment
 
-## For GitHub Pages subdirectory (andrewscodes.github.io/kitsune-angular/)
-ng deploy --base-href=/kitsune-angular/ --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes"
+## For GitHub Pages subdirectory (andrewscodes.github.io/kitsoone-website/)
+ng deploy --base-href=/kitsoone-website/ --repo=https://github.com/andrewscodes/kitsoone-website.git --name="andrewscodes"
 
 ## For custom domain (kitsunelabs.shop)
-ng deploy --repo=https://github.com/andrewscodes/kitsune-angular.git --name="andrewscodes" --cname=kitsunelabs.shop
+ng deploy --repo=https://github.com/andrewscodes/kitsoone-website.git --name="andrewscodes" --cname=kitsoone.xyz
 
 chrome://net-internals/#hsts
