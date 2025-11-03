@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
@@ -6,6 +7,8 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./nav-menu.component.scss']
 })
 export class NavMenuComponent {
+
+  constructor(private router: Router) {}
   isMobileMenuOpen = false;
 
   toggleMenu() {
@@ -19,6 +22,10 @@ export class NavMenuComponent {
 
   onCartClick() {
     console.log('Cart clicked!');
+  }
+
+  onLogoClick() {    
+    this.router.navigate(['/']);
   }
  
 }

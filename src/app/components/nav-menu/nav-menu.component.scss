@@ -8,6 +8,10 @@
 
   &__logo {        
     display: flex;
+    background: var(--background-color-light);  
+    border: none;
+    cursor: pointer;
+
     img{
       height: 35px;
     }
