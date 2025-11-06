@@ -11,24 +11,24 @@ export class HomeComponent {
 
   protected products = [
     {
-      name: "Corne Keyboard",
-      image: "assets/images/corne.webp",
-      description: "A split ergonomic keyboard with 42 keys"
+      name: "Brown Switches X60",
+      image: "assets/images/brownswitch.jpg",
+      description: "COP 80.000"
     },
     {
-      name: "Lily58 Keyboard",
-      image: "assets/images/lily58.png",
-      description: "A 58-key split keyboard with OLED displays"
+      name: "White Switches X60",
+      image: "assets/images/whiteswitch.jpg",
+      description: "COP 80.000"
     },
     {
-      name: "Nice!Nano Controller",
-      image: "assets/images/nicenano.avif",
-      description: "Wireless microcontroller for custom keyboards"
+      name: "Nice!Nano v2",
+      image: "assets/images/nicenano.png",
+      description: "COP 100.000"
     },
     {
-      name: "Corne Keyboard",
-      image: "assets/images/corne.webp",
-      description: "A split ergonomic keyboard with 42 keys"
+      name: "Nice!View",
+      image: "assets/images/niceview.png",
+      description: "COP 90.000"
     }
   ] 
 }

@@ -5,6 +5,9 @@
   align-items: center;
   font-size: 14px;
   min-height: 35px;  
+  @media (max-width: 1000px) {
+      display: none;
+    }
 
   &__content {
     box-sizing: border-box;  
@@ -17,17 +20,12 @@
 
   &__text {
     display: flex;
-    justify-content: center;    
     flex: 1;
   }
   
   &__social-links {
     display: flex;    
     gap: 12px;
-
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
 
   .social-link {   
@@ -35,7 +33,8 @@
 
     img {
       width: 18px;
-      height: 18px;      
+      height: 18px;
+      padding: 0 3px;
     }  
   }
 }

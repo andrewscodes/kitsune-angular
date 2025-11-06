@@ -11,6 +11,7 @@
     background: var(--background-color-light);  
     border: none;
     cursor: pointer;
+    padding: 0;
 
     img{
       height: 35px;
@@ -39,7 +40,7 @@
         color: var(--primary-accent);
         text-decoration: underline;
         text-decoration-color: var(--primary-accent);
-        text-underline-offset: 10px;
+        text-underline-offset: 8px;
         text-decoration-thickness: 2px;
       }
     }
@@ -49,10 +50,14 @@
     display: none;
   }
 
+  .mobile-menu-open {
+    display: flex;
+  }
+
   &__right-options {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 1.5rem;
   }
 
   .navbar-button {    
@@ -60,6 +65,7 @@
     background: transparent;
     border: none;
     cursor: pointer;    
+    padding: 0;
 
     .material-symbols-outlined {
       color: var(--text-color-dark);
@@ -73,10 +79,65 @@
 }
 
 
-@media (max-width: 768px) {
-  
-}
+//TODO: review mobile menu styles
 
-@media (max-width: 480px) {
-  
+
+@media (max-width: 1000px) {
+  .navbar {
+    justify-content: space-between;
+
+    &__options {
+      display: none;
+    }
+
+    &__options-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      
+      .material-symbols-outlined {
+        color: var(--text-color-dark);
+        font-size: 28px;
+      }
+
+      &:hover .material-symbols-outlined {
+        color: var(--primary-accent);
+      }
+    }
+
+    &__right-options {
+      display: none;
+    }
+
+    .mobile-menu-open {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--background-color-light);
+      flex-direction: column;
+      gap: 0;          
+      
+      z-index: 1000;
+
+      li {
+        height: auto;
+        padding: 1rem 2rem;
+        justify-content: flex-start;
+        border-bottom: 1px solid #f0f0f0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          background: #f8f9fa;
+        }
+      }
+    }
+  }
 }
