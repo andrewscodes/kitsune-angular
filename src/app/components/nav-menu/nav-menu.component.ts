@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, Renderer2, Inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-nav-menu',
@@ -8,16 +9,30 @@ import { Router } from '@angular/router';
 })
 export class NavMenuComponent {
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
+  
   isMobileMenuOpen = false;
 
   toggleMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    this.toggleBodyScroll();
   }
 
   onMenuItemClick() {
-    // Close the mobile menu when a menu item is clicked
     this.isMobileMenuOpen = false;
+    this.toggleBodyScroll();
+  }
+
+  private toggleBodyScroll() {
+    if (this.isMobileMenuOpen) {
+      this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
+    } else {
+      this.renderer.removeStyle(this.document.body, 'overflow');
+    }
   }
 
   onCartClick() {

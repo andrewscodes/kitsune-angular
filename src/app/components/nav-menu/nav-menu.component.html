@@ -5,18 +5,18 @@
   </button>
 
   <button class="navbar__options-menu" (click)="toggleMenu()" aria-label="Toggle menu">
-    <span class="material-symbols-outlined">menu</span>
+    <span class="material-symbols-outlined">{{ isMobileMenuOpen ? 'close' : 'menu' }}</span>
   </button>
   
-  <ul class="navbar__options" [class.mobile-menu-open]="isMobileMenuOpen" (click)="$event.stopPropagation()">    
-    <li (click)="onMenuItemClick()">Productos</li>
-    <li (click)="onMenuItemClick()">Guias</li>
-    <li (click)="onMenuItemClick()">Acerca de</li>
-    <li (click)="onMenuItemClick()">Contacto</li>
+  <ul class="navbar__options" [class.mobile-menu-open]="isMobileMenuOpen">    
+    <li (click)="onMenuItemClick(); $event.stopPropagation()">Productos</li>
+    <li (click)="onMenuItemClick(); $event.stopPropagation()">Guias</li>
+    <li (click)="onMenuItemClick(); $event.stopPropagation()">Acerca de</li>
+    <li (click)="onMenuItemClick(); $event.stopPropagation()">Contacto</li>
   </ul> 
 
   <div class="navbar__right-options">
-    <button class="navbar__searchq navbar-button">
+    <button class="navbar__search navbar-button">
       <span class="material-symbols-outlined">
         search
       </span>

@@ -1,20 +1,19 @@
 //TODO: review all css styles for card component
 
 .card {
-  background: white;
+  background: var(--background-color-light);
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px var(--transparent-black);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
   aspect-ratio: 4/5;
   display: flex;
   flex-direction: column;
-  border: 1px solid #5a5a5a27;
+  border: 1px solid var(--transparent-black);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);    
   }
 
   &__image {
@@ -22,9 +21,7 @@
     flex: 0 0 80%; 
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8f9fa;
+        
 
     img {
       width: 100%;
@@ -40,19 +37,18 @@
 
   &__content {
     padding: 0.5rem 1rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     .card__title {
-      font-size: 1.25rem;
-      font-weight: 600;
+      font-weight: 600;      
       margin: 0 0 0.5rem 0;
       color: var(--text-color-dark, #333);
     }
 
     .card__description {
-      font-size: 0.9rem;
       color: var(--text-color-secondary, #666);
       margin: 0;      
     }
