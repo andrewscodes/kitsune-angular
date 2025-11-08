@@ -5,7 +5,7 @@
   align-items: center;
   font-size: 14px;
   min-height: 35px;  
-  @media (max-width: 1000px) {
+  @media (max-width: 950px) {
       display: none;
     }
 
@@ -29,7 +29,7 @@
   }
 
   .social-link {   
-    display: flex;
+    display: flex;    
 
     img {
       width: 18px;
