@@ -15,20 +15,20 @@ export class NavMenuComponent {
     @Inject(DOCUMENT) private document: Document
   ) {}
   
-  isMobileMenuOpen = false;
+  isSidebarMenuOpen = false;
 
   toggleMenu() {
-    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    this.isSidebarMenuOpen = !this.isSidebarMenuOpen;
     this.toggleBodyScroll();
   }
 
   onMenuItemClick() {
-    this.isMobileMenuOpen = false;
+    this.isSidebarMenuOpen = false;
     this.toggleBodyScroll();
   }
 
   private toggleBodyScroll() {
-    if (this.isMobileMenuOpen) {
+    if (this.isSidebarMenuOpen) {
       this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
     } else {
       this.renderer.removeStyle(this.document.body, 'overflow');

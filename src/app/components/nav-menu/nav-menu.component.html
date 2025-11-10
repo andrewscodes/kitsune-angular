@@ -4,24 +4,26 @@
       <img src="assets/images/kitsoone_logo.png" alt="kitsoone Logo"/>
     </button>
 
-    <ul class="navbar__options" [class.mobile-menu-open]="isMobileMenuOpen">    
-      <li (click)="onMenuItemClick(); $event.stopPropagation()">Productos</li>
-      <li (click)="onMenuItemClick(); $event.stopPropagation()">Guias</li>
-      <li (click)="onMenuItemClick(); $event.stopPropagation()">Acerca de</li>
-      <li (click)="onMenuItemClick(); $event.stopPropagation()">Contacto</li>
-      
-      <div class="mobile-social-links">
-        <a href="https://discord.gg/jkVnn6FBRt" class="social-link" aria-label="Discord" target="_blank" rel="noopener noreferrer">          
+    <ul class="navbar__menu" [class.navbar__sidebar]="isSidebarMenuOpen">
+      <div class="navbar__menu-options">
+        <li (click)="onMenuItemClick(); $event.stopPropagation()">Productos</li>
+        <li (click)="onMenuItemClick(); $event.stopPropagation()">Guias</li>
+        <li (click)="onMenuItemClick(); $event.stopPropagation()">Acerca de</li>
+        <li (click)="onMenuItemClick(); $event.stopPropagation()">Contacto</li>
+      </div>
+
+      <div class="navbar__menu-social-links">
+        <a href="https://discord.gg/jkVnn6FBRt" aria-label="Discord" target="_blank" rel="noopener noreferrer">
           <img src="assets/icons/discord.svg" alt="Discord">
         </a>
-        <a href="https://www.instagram.com/kitsoone.xyz/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/kitsoone.xyz/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
           <img src="assets/icons/instagram.svg" alt="Instagram">
         </a>
-        <a href="https://github.com/kitsoone-dev" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/kitsoone-dev" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
           <img src="assets/icons/github.svg" alt="GitHub">
         </a>
       </div>
-    </ul> 
+    </ul>
 
     <div class="navbar__actions">
       <button class="navbar__search navbar-button">
@@ -43,7 +45,7 @@
       </button>
 
       <button class="navbar__menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
-        <span class="material-symbols-outlined">{{ isMobileMenuOpen ? 'close' : 'menu' }}</span>
+        <span class="material-symbols-outlined">{{ isSidebarMenuOpen ? 'close' : 'menu' }}</span>
       </button>
     </div>
   </div>
