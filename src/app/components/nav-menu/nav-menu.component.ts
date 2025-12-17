@@ -1,6 +1,6 @@
-import { Component, Renderer2, Inject } from '@angular/core';
+import { Component, Renderer2, Inject, DOCUMENT } from '@angular/core';
 import { Router } from '@angular/router';
-import { DOCUMENT } from '@angular/common';
+
 
 @Component({
   selector: 'app-nav-menu',
