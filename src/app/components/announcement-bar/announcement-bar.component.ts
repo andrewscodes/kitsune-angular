@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-announcement-bar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'kitsoone-announcement-bar',
   standalone: true,
   imports: [],
   templateUrl: './announcement-bar.component.html',
-  styleUrls: ['./announcement-bar.component.scss']
+  styleUrls: ['./announcement-bar.component.scss'],
 })
-export class AnnouncementBarComponent {
-
-}
+export class AnnouncementBarComponent {}

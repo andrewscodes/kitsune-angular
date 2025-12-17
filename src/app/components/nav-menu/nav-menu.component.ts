@@ -1,33 +1,38 @@
-import { Component, Renderer2, Inject, DOCUMENT } from '@angular/core';
+import {
+  Component,
+  Renderer2,
+  Inject,
+  DOCUMENT,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-nav-menu',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'kitsoone-nav-menu',
   templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.scss']
+  styleUrls: ['./nav-menu.component.scss'],
 })
 export class NavMenuComponent {
+  protected isSidebarMenuOpen = false;
 
   constructor(
     private router: Router,
     private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {}
-  
-  isSidebarMenuOpen = false;
 
-  toggleMenu() {
+  protected toggleMenu(): void {
     this.isSidebarMenuOpen = !this.isSidebarMenuOpen;
     this.toggleBodyScroll();
   }
 
-  onMenuItemClick() {
+  protected onMenuItemClick(): void {
     this.isSidebarMenuOpen = false;
     this.toggleBodyScroll();
   }
 
-  private toggleBodyScroll() {
+  protected toggleBodyScroll(): void {
     if (this.isSidebarMenuOpen) {
       this.renderer.setStyle(this.document.body, 'overflow', 'hidden');
     } else {
@@ -35,12 +40,11 @@ export class NavMenuComponent {
     }
   }
 
-  onCartClick() {
-    console.log('Cart clicked!');
+  protected onCartClick(): void {
+    this.router.navigate(['/cart']);
   }
 
-  onLogoClick() {    
+  public onLogoClick(): void {
     this.router.navigate(['/']);
   }
- 
 }

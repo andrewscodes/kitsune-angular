@@ -15,12 +15,12 @@
     <h2>Nuevos Productos</h2>
     <div class="home__products-container-list">
       @for(product of products; track product) {
-        <app-card 
+        <kitsoone-card 
           [imageSrc]="product.image" 
           [imageAlt]="product.name"
           [title]="product.name"
           [description]="product.description">
-        </app-card>
+        </kitsoone-card>
       }   
     </div>
   </div>
