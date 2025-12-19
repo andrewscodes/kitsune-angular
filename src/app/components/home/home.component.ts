@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
+import { Carousel, CarouselModule } from 'primeng/carousel';
 import { Button } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { ImageModule } from 'primeng/image';
@@ -21,6 +21,7 @@ interface CarouselResponsiveOption {
 })
 export class HomeComponent implements OnInit {
   protected products!: unknown[];
+  protected showNavigators = false;
 
   protected carouselResponsiveOptions: CarouselResponsiveOption[] = [
     {
@@ -40,7 +41,12 @@ export class HomeComponent implements OnInit {
     },
   ];
 
+  protected get shouldShowNavigators(): boolean {
+    return this.getCurrentNumVisible() < 4;
+  }
+
   public ngOnInit(): void {
+    Carousel.prototype.onTouchMove = (): void => undefined;
     this.products = [
       {
         id: '1000',
@@ -71,5 +77,21 @@ export class HomeComponent implements OnInit {
         price: '90.000',
       },
     ];
+  }
+
+  protected getCurrentNumVisible(): number {
+    // Check if we're running in the browser (not SSR)
+    if (typeof window === 'undefined') {
+      return 4; // Default for SSR - assume desktop view
+    }
+    const screenWidth = window.innerWidth;
+    // Find the matching responsive option based on current screen width
+    for (const option of this.carouselResponsiveOptions) {
+      const breakpointValue = parseInt(option.breakpoint.replace('px', ''));
+      if (screenWidth < breakpointValue) {
+        return option.numVisible;
+      }
+    }
+    return 4; // Default for screens larger than the largest breakpoint
   }
 }
