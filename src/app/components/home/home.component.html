@@ -14,14 +14,24 @@
   <div class="home__products-container page-width">
     <h2>Nuevos Productos</h2>
     <div class="home__products-container-list">
-      @for(product of products; track product) {
-        <kitsoone-card 
-          [imageSrc]="product.image" 
-          [imageAlt]="product.name"
-          [title]="product.name"
-          [description]="product.description">
-        </kitsoone-card>
-      }   
+      <p-carousel [value]="products" [showIndicators]="false" [numVisible]="4" [numScroll]="4" [circular]="true" [responsiveOptions]="carouselResponsiveOptions">
+          <ng-template let-product #item>
+              <div class="border border-surface rounded-border m-2 p-4">
+                  <div class="mb-4">
+                      <div class="relative mx-auto">
+                          <img src="{{ product.image }}" [alt]="product.name" class="w-full rounded-border" />                         
+                      </div>
+                  </div>
+                  <div class="mb-4 font-medium">{{ product.name }}</div>
+                  <div class="flex justify-between items-center">
+                      <div class="mt-0 font-semibold text-xl">{{ '$' + product.price }}</div>
+                      <span>                          
+                          <p-button severity="secondary" icon="pi pi-shopping-cart" styleClass="ml-2" />
+                      </span>
+                  </div>
+              </div>
+          </ng-template>
+      </p-carousel>     
     </div>
   </div>
 </section>

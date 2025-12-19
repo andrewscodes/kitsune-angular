@@ -5,11 +5,16 @@ import {
   provideClientHydration,
   withEventReplay,
 } from '@angular/platform-browser';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeuix/themes/aura';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
+    providePrimeNG({
+      theme: { preset: Aura, options: { darkModeSelector: '.app-dark' } },
+    }),
   ],
 };
