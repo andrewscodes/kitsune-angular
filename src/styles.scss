@@ -2,6 +2,14 @@
 @use './tailwind.css';
 @use './themes.scss';
 
+* {
+  // Prevent focus outline on initial page load
+  &:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
 :root {
   --page-width: 100rem;
   --menu-height: 65px;
