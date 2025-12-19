@@ -4,6 +4,7 @@ import { Button } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { ImageModule } from 'primeng/image';
 import { CommonModule } from '@angular/common';
+import { AutoFocusModule } from 'primeng/autofocus';
 
 interface CarouselResponsiveOption {
   breakpoint: string;
@@ -15,7 +16,14 @@ interface CarouselResponsiveOption {
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'kitsoone-home',
   standalone: true,
-  imports: [CommonModule, CarouselModule, Button, TagModule, ImageModule],
+  imports: [
+    CommonModule,
+    CarouselModule,
+    Button,
+    TagModule,
+    ImageModule,
+    AutoFocusModule,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
