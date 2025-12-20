@@ -46,6 +46,10 @@
         height: var(--menu-height);
       }
     }
+
+    &-social-links {
+      display: none;
+    }
   }
 
   &__menu-toggle {
@@ -55,19 +59,17 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.8rem;
   }
 
   .navbar-button {    
     display: flex;
-    background: transparent;
-    border: none;
-    cursor: pointer;    
+    cursor: pointer;  
     padding: 0;
 
-    .material-symbols-outlined {
+    .pi {
       color: var(--text-color-dark);
-      font-size: 28px;
+      font-size: 20px;      
     }
   }
 }
@@ -104,7 +106,6 @@
       }
 
       &-social-links {
-        margin-top: auto;
         padding: 1rem 2rem;
         display: flex;
         justify-content: center;
@@ -113,18 +114,12 @@
         flex-shrink: 0;
 
         a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 23px;
-          height: 23px;
-          transition: all 0.2s ease;
-          text-decoration: none;
-
-          img {
-            width: 23px;
-            height: 23px;
-            filter: brightness(0.1);
+          display: flex;          
+          justify-content: center;           
+          
+          .pi {
+            font-size: 23px;
+            color: var(--text-color-dark);
           }
         }
       }
@@ -137,9 +132,9 @@
       border: none;
       cursor: pointer;
       
-      .material-symbols-outlined {
+      .pi {
         color: var(--text-color-dark);
-        font-size: 28px;
+        font-size: 20px;
       }
     }
 
@@ -188,7 +183,7 @@
     }
     
     .navbar-button {             
-      &:hover .material-symbols-outlined {
+      &:hover .pi {
         color: var(--primary-accent);
       }
     }
@@ -197,12 +192,12 @@
   @media (max-width: 950px) {
     .navbar {
       &__menu{
-        &-social-links a:hover img {
-          transform: translateY(-1px);
+        &-social-links a:hover .pi {
+          color: var(--primary-accent);
         }
 
         &-toggle {     
-          &:hover .material-symbols-outlined {
+          &:hover .pi {
             color: var(--primary-accent);
           }
         }

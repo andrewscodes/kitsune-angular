@@ -14,38 +14,32 @@
 
       <div class="navbar__menu-social-links">
         <a href="https://discord.gg/jkVnn6FBRt" aria-label="Discord" target="_blank" rel="noopener noreferrer">
-          <img src="assets/icons/discord.svg" alt="Discord">
+          <i class="pi pi-discord"></i>
         </a>
         <a href="https://www.instagram.com/kitsoone.xyz/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <img src="assets/icons/instagram.svg" alt="Instagram">
+          <i class="pi pi-instagram"></i>
         </a>
         <a href="https://github.com/kitsoone-dev" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-          <img src="assets/icons/github.svg" alt="GitHub">
+          <i class="pi pi-github"></i>
         </a>
       </div>
     </ul>
 
     <div class="navbar__actions">
       <button class="navbar__search navbar-button">
-        <span class="material-symbols-outlined">
-          search
-        </span>
+        <i class="pi pi-search"></i>
       </button>
 
       <button class="navbar__profile navbar-button">
-        <span class="material-symbols-outlined">
-          person
-        </span>
+        <i class="pi pi-user"></i>
       </button>
 
       <button class="navbar__cart-button navbar-button" (click)="onCartClick()">
-        <span class="material-symbols-outlined">
-          shopping_bag
-        </span>
+        <i class="pi pi-shopping-cart"></i>
       </button>
 
       <button class="navbar__menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
-        <span class="material-symbols-outlined">{{ isSidebarMenuOpen ? 'close' : 'menu' }}</span>
+        <i class="pi" [class.pi-bars]="!isSidebarMenuOpen" [class.pi-times]="isSidebarMenuOpen"></i>
       </button>
     </div>
   </div>

@@ -1,6 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { Carousel, CarouselModule } from 'primeng/carousel';
-import { Button } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { ImageModule } from 'primeng/image';
 import { CommonModule } from '@angular/common';
@@ -19,7 +18,6 @@ interface CarouselResponsiveOption {
   imports: [
     CommonModule,
     CarouselModule,
-    Button,
     TagModule,
     ImageModule,
     AutoFocusModule,
