@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
-import { HomeComponent } from './components/home/home.component';
 import { AnnouncementBarComponent } from './components/announcement-bar/announcement-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -8,9 +8,9 @@ import { FooterComponent } from './components/footer/footer.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'kitsoone-main',
   imports: [
+    RouterOutlet,
     AnnouncementBarComponent,
     NavMenuComponent,
-    HomeComponent,
     FooterComponent,
   ],
   templateUrl: './app.component.html',

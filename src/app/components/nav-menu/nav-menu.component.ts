@@ -5,11 +5,13 @@ import {
   DOCUMENT,
   ChangeDetectionStrategy,
 } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'kitsoone-nav-menu',
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.scss'],
 })
@@ -46,5 +48,10 @@ export class NavMenuComponent {
 
   public onLogoClick(): void {
     this.router.navigate(['/']);
+  }
+
+  protected onAboutClick(): void {
+    this.router.navigate(['/acerca-de']);
+    this.onMenuItemClick();
   }
 }
