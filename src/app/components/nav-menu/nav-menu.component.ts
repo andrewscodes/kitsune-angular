@@ -6,6 +6,13 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import {
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  DISCORD_URL,
+  GITHUB_URL,
+  generateWhatsAppUrl,
+} from '../../constants';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -17,6 +24,16 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class NavMenuComponent {
   protected isSidebarMenuOpen = false;
+
+  // Social media URLs
+  public readonly facebookUrl = FACEBOOK_URL;
+  public readonly instagramUrl = INSTAGRAM_URL;
+  public readonly discordUrl = DISCORD_URL;
+  public readonly githubUrl = GITHUB_URL;
+
+  public get whatsappUrl(): string {
+    return generateWhatsAppUrl();
+  }
 
   constructor(
     private router: Router,
