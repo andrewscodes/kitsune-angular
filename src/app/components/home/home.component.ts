@@ -4,6 +4,7 @@ import { TagModule } from 'primeng/tag';
 import { ImageModule } from 'primeng/image';
 import { CommonModule } from '@angular/common';
 import { AutoFocusModule } from 'primeng/autofocus';
+import { DISCORD_URL } from '../../constants';
 
 interface CarouselResponsiveOption {
   breakpoint: string;
@@ -26,6 +27,7 @@ interface CarouselResponsiveOption {
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  protected readonly discordUrl = DISCORD_URL;
   protected products!: unknown[];
   protected showNavigators = false;
 

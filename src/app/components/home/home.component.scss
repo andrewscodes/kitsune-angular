@@ -79,4 +79,51 @@
     }
   }
 
+  &__community-section {
+    margin-top: 5rem;
+    padding: 4rem 3rem;
+    background: var(--background-color-gray);
+  }
+
+  &__community-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5em;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;     
+      line-height: 2rem;
+    }
+  }
+
+  &__discord-button {
+    background: var(--primary-accent);
+    color: var(--text-color-light);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--primary-accent);
+      box-shadow: 0 10px 25px var(--primary-accent-box-shadow);
+    }
+
+    i {
+      font-size: 1.1rem;
+    }
+  }
 }
