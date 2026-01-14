@@ -29,6 +29,7 @@ interface CarouselResponsiveOption {
 export class HomeComponent implements OnInit {
   protected readonly discordUrl = DISCORD_URL;
   protected products!: unknown[];
+  protected userBuilds!: unknown[];
   protected showNavigators = false;
 
   protected carouselResponsiveOptions: CarouselResponsiveOption[] = [
@@ -41,6 +42,24 @@ export class HomeComponent implements OnInit {
       breakpoint: '768px',
       numVisible: 2,
       numScroll: 2,
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ];
+
+  protected showcaseResponsiveOptions: CarouselResponsiveOption[] = [
+    {
+      breakpoint: '1024px',
+      numVisible: 2,
+      numScroll: 2,
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 1,
+      numScroll: 1,
     },
     {
       breakpoint: '560px',
@@ -83,6 +102,41 @@ export class HomeComponent implements OnInit {
         description: 'Product Description',
         image: 'assets/images/brownswitch.jpg',
         price: '90.000',
+      },
+    ];
+
+    this.userBuilds = [
+      {
+        id: '1',
+        title: 'Sunset Vibes',
+        username: 'alexkeyb',
+        image: 'assets/images/onyx.png',
+        likes: 342,
+        views: 1250,
+      },
+      {
+        id: '2',
+        title: 'Minimalist Dream',
+        username: 'maria_builds',
+        image: 'assets/images/onyx.png',
+        likes: 198,
+        views: 890,
+      },
+      {
+        id: '3',
+        title: 'RGB Beast',
+        username: 'gamer_pro',
+        image: 'assets/images/onyx.png',
+        likes: 567,
+        views: 2100,
+      },
+      {
+        id: '4',
+        title: 'Nordic Clean',
+        username: 'scandi_style',
+        image: 'assets/images/onyx.png',
+        likes: 423,
+        views: 1680,
       },
     ];
   }

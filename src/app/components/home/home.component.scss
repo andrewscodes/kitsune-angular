@@ -126,4 +126,17 @@
       font-size: 1.1rem;
     }
   }
+
+  &__showcase-container {
+    box-sizing: border-box;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      margin-left: 8px;    
+      color: var(--text-color-dark);
+    }
+  }
 }
