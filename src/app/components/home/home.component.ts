@@ -79,7 +79,7 @@ export class HomeComponent implements OnInit {
         id: '1000',
         name: 'OLED Display E-Paper',
         description: 'Product Description',
-        image: 'assets/images/niceview.png',
+        image: 'assets/images/niceview.jpg',
         price: '100.000',
       },
       {
@@ -93,7 +93,7 @@ export class HomeComponent implements OnInit {
         id: '1002',
         name: 'Supermini MCU',
         description: 'Product Description',
-        image: 'assets/images/nicenano.png',
+        image: 'assets/images/nicenano.jpg',
         price: '130.000',
       },
       {
