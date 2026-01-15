@@ -42,16 +42,14 @@
     </div>
   </div>
   <div class="home__showcase-container page-width">
-    <h2>Builds de nuestros usuarios</h2>    
+    <h2>Showcase de nuestros usuarios</h2>    
     <div class="home__showcase-container-list">
-      <p-carousel [value]="products" [showNavigators]="shouldShowNavigators" [showIndicators]="false" [numVisible]="4" [numScroll]="1" [circular]="false" [responsiveOptions]="showcaseResponsiveOptions">
+      <p-carousel [value]="showcase" [showNavigators]="shouldShowNavigators" [showIndicators]="false" [numVisible]="4" [numScroll]="1" [circular]="false" [responsiveOptions]="showcaseResponsiveOptions">
           <ng-template let-build #item>
-              <div class="border border-surface rounded-border m-2 p-4">
-                  <div class="mb-4">
-                      <div class="relative mx-auto">
-                          <img src="{{ build.image }}" [alt]="build.title" class="w-full rounded-border" />                         
-                      </div>
-                  </div>                 
+              <div class="border-surface rounded-border m-2 ">                 
+                  <div class="relative mx-auto">
+                      <img src="{{ build.image }}" [alt]="build.title" class="w-full rounded-border" />                         
+                  </div>
               </div>
           </ng-template>
       </p-carousel>     

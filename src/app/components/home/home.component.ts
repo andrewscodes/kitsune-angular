@@ -29,7 +29,7 @@ interface CarouselResponsiveOption {
 export class HomeComponent implements OnInit {
   protected readonly discordUrl = DISCORD_URL;
   protected products!: unknown[];
-  protected userBuilds!: unknown[];
+  protected showcase!: unknown[];
   protected showNavigators = false;
 
   protected carouselResponsiveOptions: CarouselResponsiveOption[] = [
@@ -105,38 +105,22 @@ export class HomeComponent implements OnInit {
       },
     ];
 
-    this.userBuilds = [
+    this.showcase = [
       {
         id: '1',
-        title: 'Sunset Vibes',
-        username: 'alexkeyb',
-        image: 'assets/images/onyx.png',
-        likes: 342,
-        views: 1250,
+        image: 'assets/images/showcase1.jpg',
       },
       {
         id: '2',
-        title: 'Minimalist Dream',
-        username: 'maria_builds',
-        image: 'assets/images/onyx.png',
-        likes: 198,
-        views: 890,
+        image: 'assets/images/showcase2.jpg',
       },
       {
         id: '3',
-        title: 'RGB Beast',
-        username: 'gamer_pro',
-        image: 'assets/images/onyx.png',
-        likes: 567,
-        views: 2100,
+        image: 'assets/images/showcase3.jpg',
       },
       {
         id: '4',
-        title: 'Nordic Clean',
-        username: 'scandi_style',
-        image: 'assets/images/onyx.png',
-        likes: 423,
-        views: 1680,
+        image: 'assets/images/showcase4.jpg',
       },
     ];
   }
